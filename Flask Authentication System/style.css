@@ -1,85 +1,117 @@
-/* General reset for margins and padding */
-body,
-html {
+/* General Styles */
+body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: "Arial", sans-serif;
-}
-
-/* Background styling */
-.hero {
-  background-color: #e3f2fd;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: #ffffff;
 }
 
-/* Login container that centers the card */
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-/* Card-style login box */
-.login-card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+/* Hero Section */
+.hero {
   width: 100%;
   max-width: 400px;
-  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Heading */
+/* Login Container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Login Card */
+.login-card {
+  width: 100%;
+}
+
 .login-card h3 {
-  font-size: 24px;
-  color: #333;
+  text-align: center;
   margin-bottom: 20px;
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-/* Form fields styling */
+/* Form Styles */
 .form-group {
   margin-bottom: 20px;
 }
 
 .form-control {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
   width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  color: #333;
+  transition: border-color 0.3s ease;
 }
 
-/* Login button styling */
+.form-control:focus {
+  border-color: #ff758c;
+  outline: none;
+}
+
 .btn-login {
   width: 100%;
   padding: 12px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 5px;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: #ffffff;
   border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .btn-login:hover {
-  background-color: #0056b3;
+  background: linear-gradient(135deg, #ff617d, #ff6898);
 }
 
-/* Register link styling */
+/* Register Link */
 .register-link {
   display: block;
+  text-align: center;
   margin-top: 15px;
   font-size: 14px;
-  color: #007bff;
+  color: #ff758c;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .register-link:hover {
+  color: #ff617d;
   text-decoration: underline;
+}
+
+/* Flash Messages */
+.alert {
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.alert-success {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+}
+
+.alert-danger {
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
 }
